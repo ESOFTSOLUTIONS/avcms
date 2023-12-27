@@ -36,7 +36,7 @@ Shipment, Verzending
 Thank you ${name}!, Bedankt, ${name}!
 Contact information, Contactinformatie
 Order #${orderNumber}, Bestelling #${orderNumber}
-ADD TO CART, TOEVOEGEN AAN WINKELMANDJE
+ADD TO CART, Shto ne shporte
 Please select variant options, Selecteer alstublieft opties
 VIEW CART (${count}), WINKELMANDJE BEKIJKEN (${count})
 JUST ADDED TO YOUR CART, TOEGEVOEGD AAN WINKELMANDJE

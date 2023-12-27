@@ -85,6 +85,7 @@ export function Field(props) {
   const F = (() => {
     switch (type) {
       case 'text':
+      case 'number':
         return Input;
       case 'select':
         return Select;

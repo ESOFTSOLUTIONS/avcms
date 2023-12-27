@@ -182,7 +182,7 @@ Filter.propTypes = {
     }),
     children: PropTypes.arrayOf(
       PropTypes.shape({
-        categoryId: PropTypes.number,
+        categoryId: PropTypes.string,
         name: PropTypes.string,
         uuid: PropTypes.string
       })

@@ -8,6 +8,7 @@ COPY public .
 COPY media .
 COPY config .
 COPY translations .
+COPY .evershop .
 RUN npm install
 RUN npm run build
 

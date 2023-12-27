@@ -84,7 +84,9 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
     <div className="add-to-cart mt-2">
       <div style={{ width: '8rem' }}>
         <Field
-          type="text"
+          type="number"
+          min="1"
+          step="1"
           value="1"
           validationRules={['notEmpty']}
           className="qty"

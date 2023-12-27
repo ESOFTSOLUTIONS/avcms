@@ -8,7 +8,7 @@ function Thumbnail({ url, imageUrl, alt }) {
     <div className="product-thumbnail-listing">
       {imageUrl && (
         <a href={url}>
-          <img src={imageUrl} alt={alt} />
+          <img src={imageUrl} alt={alt} className="max-h-[260px]" />
         </a>
       )}
       {!imageUrl && (

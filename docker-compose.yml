@@ -16,8 +16,10 @@ services:
       - database
     ports:
       - 3000:3000
-  
-  #The postgres database: 
+    volumes:
+      - .evershop:/app/.evershop
+
+  #The postgres database:
   database:
     image: postgres:16
     restart: unless-stopped

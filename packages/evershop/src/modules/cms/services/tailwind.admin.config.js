@@ -39,7 +39,8 @@ module.exports = {
     scale: false,
     rotate: false,
     translate: false,
-    skew: false
+    skew: false,
+    hover: true
   },
   theme: {
     fontSize: {

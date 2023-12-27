@@ -8,7 +8,7 @@ export default function AttributeEditPageHeading({ backUrl, attribute }) {
       backUrl={backUrl}
       heading={
         attribute
-          ? `Editing ${attribute.attributeName}`
+          ? `Editing: ${attribute.attributeName}`
           : 'Create A New Attribute'
       }
     />

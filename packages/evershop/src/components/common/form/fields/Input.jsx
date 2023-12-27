@@ -24,6 +24,8 @@ const inputProps = function buidProps(props) {
     'onKeyPress',
     'onKeyDown',
     'onKeyUp',
+    'min',
+    'max',
     'value'
   ].forEach((a) => {
     if (props[a]) obj[a] = props[a];
@@ -34,13 +36,13 @@ const inputProps = function buidProps(props) {
 };
 
 const Input = React.forwardRef((props, ref) => {
-  const { label, name, instruction, prefix, suffix, error } = props;
+  const { label, name, instruction, prefix, suffix, error, type } = props;
   return (
     <div className={`form-field-container ${error ? 'has-error' : null}`}>
       {label && <label htmlFor={name}>{label}</label>}
       <div className="field-wrapper flex flex-grow">
         {prefix && <div className="field-prefix align-middle">{prefix}</div>}
-        <input type="text" {...inputProps(props)} ref={ref} />
+        <input type={type} {...inputProps(props)} ref={ref} />
         <div className="field-border" />
         {suffix && <div className="field-suffix">{suffix}</div>}
       </div>
@@ -59,7 +61,8 @@ Input.propTypes = {
   name: PropTypes.string,
   prefix: PropTypes.node,
   suffix: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  type: PropTypes.string
 };
 
 Input.defaultProps = {
@@ -69,7 +72,8 @@ Input.defaultProps = {
   prefix: undefined,
   suffix: undefined,
   name: undefined,
-  value: undefined
+  value: undefined,
+  type: 'text'
 };
 
 export { Input };

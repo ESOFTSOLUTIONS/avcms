@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": [
-        "./themes/friday/components/*",
+        "./themes/avd/components/*",
         "./extensions/productComment/components/*",
         "./packages/evershop/src/components/*"
       ],

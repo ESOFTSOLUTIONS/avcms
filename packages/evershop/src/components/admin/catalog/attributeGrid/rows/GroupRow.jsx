@@ -12,7 +12,7 @@ export default function GroupRow({ groups }) {
 
   const onEdit = (group) => {
     openAlert({
-      heading: `Editing ${group.groupName}`,
+      heading: `Editing: ${group.groupName}`,
       content: (
         <div>
           <Form
