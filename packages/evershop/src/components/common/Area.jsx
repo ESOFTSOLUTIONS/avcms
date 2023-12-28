@@ -83,7 +83,7 @@ Area.propTypes = {
   className: PropTypes.string,
   coreComponents: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
+      id: PropTypes.number,
       sortOrder: PropTypes.number,
       component: PropTypes.shape({
         default: PropTypes.elementType

@@ -120,7 +120,7 @@ CategoryFilter.propTypes = {
   ).isRequired,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
-      categoryId: PropTypes.string,
+      categoryId: PropTypes.number,
       name: PropTypes.string,
       uuid: PropTypes.string
     })

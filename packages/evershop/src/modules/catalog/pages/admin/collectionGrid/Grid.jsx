@@ -237,7 +237,7 @@ CollectionGrid.propTypes = {
   collections: PropTypes.shape({
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        collectionId: PropTypes.number.isRequired,
+        collectionId: PropTypes.string.isRequired,
         uuid: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         code: PropTypes.string.isRequired,

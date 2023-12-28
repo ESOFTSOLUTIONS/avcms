@@ -6,6 +6,7 @@ module.exports = {
     menu: async (root, _, { pool }) => {
       const query = select('name')
         .select('uuid')
+        .select('position')
         .select('request_path')
         .select('url_key')
         .from('category', 'cat');
@@ -21,12 +22,13 @@ module.exports = {
         .and('cat.include_in_nav', '=', 1)
         .and('des.url_key', 'IS NOT NULL', null)
         .and('des.url_key', '!=', '');
+      query.orderBy('cat.position', 'ASC');
 
       const items = (await query.execute(pool)).map((i) => ({
         name: i.name,
-        url: i.request_path || buildUrl('categoryView', { uuid: i.uuid })
-      }));
-
+        url: i.request_path || buildUrl('categoryView', { uuid: i.uuid }),
+        position: i.position
+      })).sort((a, b) => a.position - b.position);
       return { items };
     }
   }

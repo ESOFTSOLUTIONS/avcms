@@ -87,7 +87,7 @@ General.propTypes = {
   collection: PropTypes.shape({
     name: PropTypes.string,
     description: PropTypes.string,
-    collectionId: PropTypes.number
+    collectionId: PropTypes.string
   })
 };
 

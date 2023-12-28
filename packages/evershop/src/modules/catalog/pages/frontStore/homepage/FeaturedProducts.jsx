@@ -20,7 +20,7 @@ export default function FeaturedProducts({ collection }) {
 
 FeaturedProducts.propTypes = {
   collection: PropTypes.shape({
-    collectionId: PropTypes.number.isRequired,
+    collectionId: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     products: PropTypes.shape({
       items: PropTypes.arrayOf(
@@ -41,7 +41,7 @@ FeaturedProducts.propTypes = {
           image: PropTypes.shape({
             alt: PropTypes.string.isRequired,
             url: PropTypes.string.isRequired
-          }).isRequired,
+          }),
           url: PropTypes.string.isRequired
         })
       ).isRequired

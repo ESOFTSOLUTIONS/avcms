@@ -5,6 +5,7 @@ type MenuItem {
   name: String!
   url: String!
   children: [MenuItem]
+  position: Int
 }
 
 """

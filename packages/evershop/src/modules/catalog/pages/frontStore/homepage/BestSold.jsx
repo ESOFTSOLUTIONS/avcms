@@ -21,7 +21,7 @@ export default function BestSold({ collection }) {
 
 BestSold.propTypes = {
   collection: PropTypes.shape({
-    collectionId: PropTypes.number.isRequired,
+    collectionId: PropTypes.string,
     name: PropTypes.string.isRequired,
     products: PropTypes.shape({
       items: PropTypes.arrayOf(
@@ -42,7 +42,7 @@ BestSold.propTypes = {
           image: PropTypes.shape({
             alt: PropTypes.string.isRequired,
             url: PropTypes.string.isRequired
-          }).isRequired,
+          }),
           url: PropTypes.string.isRequired
         })
       ).isRequired

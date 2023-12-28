@@ -267,7 +267,7 @@ export default function Products({ collection: { code, addProductApi } }) {
 
 Products.propTypes = {
   collection: PropTypes.shape({
-    collectionId: PropTypes.number,
+    collectionId: PropTypes.string,
     code: PropTypes.string,
     addProductApi: PropTypes.string
   }).isRequired

@@ -22,7 +22,7 @@ module.exports = {
           .where('collection_id', '=', product.collectionId)
           .load(pool);
         return buildUrl('removeProductFromCollection', {
-          collection_id: collection.uuid,
+          collection_id: collection.collectionId,
           product_id: product.uuid
         });
       }

@@ -4,7 +4,7 @@ import './Logo.scss';
 
 export default function Logo({
   themeConfig: {
-    logo: { src, alt = 'Evershop', width = '128px', height = '128px' }
+    logo: { src, alt = 'AV CMS', width = '128px', height = '128px' }
   }
 }) {
   return (
