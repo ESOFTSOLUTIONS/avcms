@@ -21,26 +21,26 @@ Payment Method, Betaalmethode
 Shipping Method, Verzendmethode
 No payment methods available, Geen betaalmethodes beschikbaar
 Place Order, Plaats Bestelling
-My billing address is same as shipping address, Factuuradres is hetzelfde als het verzendadres
-${count} items, ${count} producten
-Discount, Korting
-Shipping, Verzending
-No tax, Geen BTW
-Tax, BTW
-Sorry, there is no available method for your address, Excuses, er is geen beschikbare methode voor uw adres
-Please enter a shipping address in order to see shipping quotes, Voer een verzendadres in om verzendkosten te berekenen
-Continue to payment, Doorgaan naar betaling
-No payment method available, Geen betaalmethodes beschikbaar
-Ship to, Verzenden naar
-Shipment, Verzending
-Thank you ${name}!, Bedankt, ${name}!
-Contact information, Contactinformatie
-Order #${orderNumber}, Bestelling #${orderNumber}
-ADD TO CART, Shto ne shporte
-Please select variant options, Selecteer alstublieft opties
-VIEW CART (${count}), WINKELMANDJE BEKIJKEN (${count})
-JUST ADDED TO YOUR CART, TOEGEVOEGD AAN WINKELMANDJE
-Promotion code?, Kortingscode？
-Enter coupon code, Voer kortingscode in
-Apply, Toepassen
-Your cart is empty!, Uw winkelmandje is leeg！
+My billing address is same as shipping address, Adresa ime e faturimit është e njëjtë me adresën e transportit
+${count} items, ${count} artikuj
+Discount,Zbritja
+Shipping, Transporti
+No tax, Pa taksa
+Tax, Taksë
+Sorry, there is no available method for your address, Na vjen keq, nuk ka metoda të disponueshme për adresën tuaj
+Please enter a shipping address in order to see shipping quotes, Ju lutemi shkruani një adresë transporti për të parë ofertat e transportit
+Continue to payment, Vazhdo tek pagesa
+No payment method available, Nuk ka metoda pagese të disponueshme
+Ship to, Transporti tek
+Shipment, Transporti
+Thank you ${name}!, Faleminderit ${name}!
+Contact information, Informacioni i kontaktit
+Order #${orderNumber}, Porosia #${orderNumber}
+ADD TO CART, SHTO NË SHPORTË
+Please select variant options, Ju lutemi zgjidhni opsionet e variantit
+VIEW CART (${count}), SHIKO SHPORTËN (${count})
+JUST ADDED TO YOUR CART, SAPO U SHTUA NË SHPORTËN TUAJ
+Promotion code?, Kodi i promovimit?
+Enter coupon code, Vendosni kodin e kuponit
+Apply, Apliko
+Your cart is empty!, Shporta juaj është e zbrazët!

@@ -3,4 +3,4 @@ SHOP BY, Blej sipas
 Sort By, Rendit sipas
 There is no product to display, Nuk ka produkt për të shfaqur
 ${count} products, ${count} produkte
-Search results for "${keyword}", Rezultatet e kërkimit për "${keyword}"
+Search results for ${keyword}, Rezultatet e kërkimit për ${keyword}
