@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+// customs css
+
+.Toastify__toast-container > .Toastify__toast {
+  padding-left: 25px !important;
+}

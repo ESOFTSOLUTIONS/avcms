@@ -4,6 +4,7 @@ import './Layout.scss';
 import './tailwind.scss';
 
 export default function AdminLayout() {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <div className="header">
@@ -16,11 +17,9 @@ export default function AdminLayout() {
         <div className="main-content">
           <Area id="content" className="main-content-inner" />
           <div className="footer">
-            <div className="copyright">
-              <span>Copyright © 2023 AV CMS</span>
-            </div>
-            <div className="version">
-              <span>Version 1.0 dev</span>
+            <div className="copyright flex flex-row gap-1">
+              <span>Copyright © { currentYear } AV CMS</span>
+              <span>(Version 1.0)</span>
             </div>
           </div>
         </div>

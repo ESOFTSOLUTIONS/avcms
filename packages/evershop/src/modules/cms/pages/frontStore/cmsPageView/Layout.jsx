@@ -3,6 +3,8 @@ import Area from '@components/common/Area';
 import './Layout.scss';
 
 export default function Layout() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <div className="header flex justify-between">
@@ -97,7 +99,7 @@ export default function Layout() {
           </div>
           <div className="self-center">
             <div className="copyright text-center md:text-right text-textSubdued">
-              <span>Copyright © 2023 AV CMS</span>
+              <span>Copyright © { currentYear } AV CMS</span>
             </div>
           </div>
         </div>

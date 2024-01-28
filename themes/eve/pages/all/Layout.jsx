@@ -6,6 +6,8 @@ import "./Layout.scss";
 import "./tailwind.scss";
 
 export default function Layout() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <LoadingBar />
@@ -113,7 +115,7 @@ export default function Layout() {
           </div>
           <div className="self-center">
             <div className="copyright text-center md:text-right text-textSubdued">
-              <span>Copyright © 2023 AV CMS</span>
+              <span>Copyright © { currentYear } AV CMS</span>
             </div>
           </div>
         </div>

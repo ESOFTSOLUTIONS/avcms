@@ -6,7 +6,7 @@ export default function Logo({ dashboardUrl }) {
   return (
     <div className="logo">
       <a href={dashboardUrl} className="flex items-end">
-        <svg
+      <svg
           xmlns="http://www.w3.org/2000/svg"
           width="254"
           height="292"

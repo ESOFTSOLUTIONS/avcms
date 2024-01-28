@@ -1,6 +1,7 @@
 const config = require('config');
 
 module.exports = () => {
+  const currentYear = new Date().getFullYear();
   const themeConfig = {
     logo: {
       alt: undefined,
@@ -14,7 +15,7 @@ module.exports = () => {
       scripts: [],
       bases: []
     },
-    copyRight: `© 2023 AV CMS. All Rights Reserved.`
+    copyRight: `© ${currentYear} AV CMS. All Rights Reserved.`
   };
   config.util.setModuleDefaults('themeConfig', themeConfig);
   config.util.setModuleDefaults('system', {
