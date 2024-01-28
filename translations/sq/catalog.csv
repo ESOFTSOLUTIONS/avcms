@@ -4,3 +4,7 @@ Sort By, Rendit sipas
 There is no product to display, Nuk ka produkt për të shfaqur
 ${count} products, ${count} produkte
 Search results for ${keyword}, Rezultatet e kërkimit për ${keyword}
+Products, Produktet
+Disable ${qty} products, Çaktivizo ${qty} produkte
+Enable ${qty} products, Aktivizo ${qty} produkte
+Delete ${qty} products, Fshij ${qty} produkte

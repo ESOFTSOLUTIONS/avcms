@@ -17,6 +17,7 @@ import DropdownColumnHeader from '@components/common/grid/headers/Dropdown';
 import { Card } from '@components/admin/cms/Card';
 import DummyColumnHeader from '@components/common/grid/headers/Dummy';
 import QtyRow from '@components/admin/catalog/productGrid/rows/QtyRow';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 function Actions({ products = [], selectedIds = [] }) {
   const { openAlert, closeAlert } = useAlertContext();
@@ -50,18 +51,18 @@ function Actions({ products = [], selectedIds = [] }) {
 
   const actions = [
     {
-      name: 'Disable',
+      name: _('Disable'),
       onAction: () => {
         openAlert({
-          heading: `Disable ${selectedIds.length} products`,
+          heading: _('Disable ${qty} products', { qty: selectedIds.length }),
           content: 'Are you sure?',
           primaryAction: {
-            title: 'Cancel',
+            title: _('Cancel'),
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Disable',
+            title: _('Disable'),
             onAction: async () => {
               await updateProducts(0);
             },
@@ -72,18 +73,18 @@ function Actions({ products = [], selectedIds = [] }) {
       }
     },
     {
-      name: 'Enable',
+      name: _('Enable'),
       onAction: () => {
         openAlert({
-          heading: `Enable ${selectedIds.length} products`,
+          heading: _('Enable ${qty} products', { qty: selectedIds.length }),
           content: 'Are you sure?',
           primaryAction: {
-            title: 'Cancel',
+            title: _('Cancel'),
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Enable',
+            title: _('Enable'),
             onAction: async () => {
               await updateProducts(1);
             },
@@ -94,18 +95,18 @@ function Actions({ products = [], selectedIds = [] }) {
       }
     },
     {
-      name: 'Delete',
+      name: _('Delete'),
       onAction: () => {
         openAlert({
-          heading: `Delete ${selectedIds.length} products`,
+          heading: _('Delete ${qty} products', { qty: selectedIds.length }),
           content: <div>Can&apos;t be undone</div>,
           primaryAction: {
-            title: 'Cancel',
+            title: _('Cancel'),
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Delete',
+            title: _('Delete'),
             onAction: async () => {
               await deleteProducts();
             },
@@ -124,7 +125,7 @@ function Actions({ products = [], selectedIds = [] }) {
         <td style={{ borderTop: 0 }} colSpan="100">
           <div className="inline-flex border border-divider rounded justify-items-start">
             <a href="#" className="font-semibold pt-075 pb-075 pl-15 pr-15">
-              {selectedIds.length} selected
+              { selectedIds.length } { _('selected') }
             </a>
             {actions.map((action) => (
               <a
@@ -196,7 +197,7 @@ export default function ProductGrid({
                   component: {
                     default: () => (
                       <BasicColumnHeader
-                        title="Product Name"
+                        title={_('Product name')}
                         id="name"
                         currentFilters={currentFilters}
                       />
@@ -209,7 +210,7 @@ export default function ProductGrid({
                     default: () => (
                       <FromToColumnHeader
                         id="price"
-                        title="Price"
+                        title={_('Price')}
                         currentFilters={currentFilters}
                       />
                     )
@@ -220,7 +221,7 @@ export default function ProductGrid({
                   component: {
                     default: () => (
                       <BasicColumnHeader
-                        title="SKU"
+                        title={_('SKU')}
                         id="sku"
                         currentFilters={currentFilters}
                       />
@@ -232,7 +233,7 @@ export default function ProductGrid({
                   component: {
                     default: () => (
                       <FromToColumnHeader
-                        title="Qty"
+                        title={_('Qty')}
                         id="qty"
                         currentFilters={currentFilters}
                       />
@@ -245,11 +246,11 @@ export default function ProductGrid({
                     default: () => (
                       <DropdownColumnHeader
                         id="status"
-                        title="Status"
+                        title={_('Status')}
                         currentFilters={currentFilters}
                         options={[
-                          { value: 1, text: 'Enabled' },
-                          { value: 0, text: 'Disabled' }
+                          { value: 1, text: _('Enabled') },
+                          { value: 0, text: _('Disabled') }
                         ]}
                       />
                     )
@@ -350,7 +351,7 @@ export default function ProductGrid({
       </table>
       {products.length === 0 && (
         <div className="flex w-full justify-center">
-          There is no product to display
+          { _('There is no product to display')}
         </div>
       )}
       <Pagination total={total} limit={limit} page={page} />

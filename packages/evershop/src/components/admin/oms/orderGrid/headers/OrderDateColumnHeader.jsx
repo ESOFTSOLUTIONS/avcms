@@ -4,6 +4,7 @@ import { DateTime } from 'luxon';
 import { Date } from '@components/common/form/fields/Date';
 import { useAppState } from '@components/common/context/app';
 import { get } from '@evershop/evershop/src/lib/util/get';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export default function FromToColumnHeader({ title, id }) {
   const filterFrom = React.useRef(null);
@@ -55,7 +56,7 @@ export default function FromToColumnHeader({ title, id }) {
             <Date
               ref={filterFrom}
               onChange={(e) => onChange(e)}
-              placeholder="From"
+              placeholder={_('From')}
               className="form-control"
               name="dateFilterFrom"
             />
@@ -64,7 +65,7 @@ export default function FromToColumnHeader({ title, id }) {
             <Date
               ref={filterTo}
               onChange={(e) => onChange(e)}
-              placeholder="To"
+              placeholder={_('To')}
               className="form-control"
               name="dateFilterTo"
             />

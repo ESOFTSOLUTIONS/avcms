@@ -4,6 +4,7 @@ import { Field } from '@components/common/form/Field';
 import { Form } from '@components/common/form/Form';
 import './LoginForm.scss';
 import Button from '@components/common/form/Button';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export default function LoginForm({ authUrl, dashboardUrl }) {
   const [error, setError] = React.useState(null);
@@ -43,20 +44,20 @@ export default function LoginForm({ authUrl, dashboardUrl }) {
         <Field
           name="email"
           type="email"
-          label="Email"
-          placeholder="Email"
+          label={_('Email')}
+          placeholder={_('Email Address')}
           validationRules={['notEmpty', 'email']}
         />
         <Field
           name="password"
           type="password"
-          label="Password"
-          placeholder="Password"
+          label={_('Password')}
+          placeholder={_('Password')}
           validationRules={['notEmpty']}
         />
         <div className="form-submit-button flex border-t border-divider mt-1 pt-1">
           <Button
-            title="Login"
+            title={_('Login')}
             type="submit"
             onAction={() => {
               document

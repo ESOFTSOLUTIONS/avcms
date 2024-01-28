@@ -6,6 +6,7 @@ import { useModal } from '@components/common/modal/useModal';
 import './Products.scss';
 import AddProducts from '@components/admin/catalog/collection/collectionEdit/AddProducts';
 import Spinner from '@components/common/Spinner';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 const ProductsQuery = `
   query Query ($code: String!, $filters: [FilterInput!]) {
@@ -108,7 +109,7 @@ export default function Products({ collection: { code, addProductApi } }) {
   if (data || fetching) {
     return (
       <Card
-        title="Products"
+        title={_('Products')}
         actions={[
           {
             name: 'Add products',

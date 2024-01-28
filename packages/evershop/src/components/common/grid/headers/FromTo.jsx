@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Input } from '@components/common/form/fields/Input';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export default function FromToColumnHeader({ title, id, currentFilters = [] }) {
   const filterFrom = React.useRef(null);
@@ -32,13 +33,13 @@ export default function FromToColumnHeader({ title, id, currentFilters = [] }) {
         <div className="title" style={{ marginBottom: '1rem' }}>
           <span>{title}</span>
         </div>
-        <div className="flex space-x-1">
+        <div className="flex flex-row gap-1">
           <div style={{ width: '6rem' }}>
             <Input
               type="text"
               ref={filterFrom}
               onKeyPress={(e) => onKeyPress(e)}
-              placeholder="From"
+              placeholder={_('From')}
               className="form-control"
             />
           </div>
@@ -47,7 +48,7 @@ export default function FromToColumnHeader({ title, id, currentFilters = [] }) {
               type="text"
               ref={filterTo}
               onKeyPress={(e) => onKeyPress(e)}
-              placeholder="To"
+              placeholder={_('To')}
               className="form-control"
             />
           </div>
