@@ -6,6 +6,7 @@ import { Form } from '@components/common/form/Form';
 import { useAlertContext } from '@components/common/modal/Alert';
 import { Card } from '@components/admin/cms/Card';
 import { VariantModal } from '@components/admin/catalog/productEdit/variants/VariantModal';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export function EditVariant({
   variant,
@@ -47,7 +48,7 @@ export function EditVariant({
               <div className="flex justify-end">
                 <div className="grid grid-cols-2 gap-1">
                   <Button
-                    title="Save"
+                    title={_('Save')}
                     variant="primary"
                     onAction={() => {
                       document.getElementById(formId).dispatchEvent(
@@ -59,7 +60,7 @@ export function EditVariant({
                     }}
                   />
                   <Button
-                    title="Cancel"
+                    title={_('Cancel')}
                     variant="secondary"
                     onAction={closeAlert}
                   />

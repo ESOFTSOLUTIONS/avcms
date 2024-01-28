@@ -6,6 +6,7 @@ import { useModal } from '@components/common/modal/useModal';
 import { Card } from '@components/admin/cms/Card';
 import { VariantModal } from '@components/admin/catalog/productEdit/variants/VariantModal';
 import { SubmitButton } from '@components/admin/catalog/productEdit/variants/SubmitButton';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export function CreateVariant({
   productId,
@@ -59,7 +60,7 @@ export function CreateVariant({
                           refresh={refresh}
                         />
                         <Button
-                          title="Cancel"
+                          title={_('Cancel')}
                           variant="secondary"
                           onAction={modal.closeModal}
                         />

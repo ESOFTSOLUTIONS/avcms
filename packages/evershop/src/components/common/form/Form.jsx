@@ -10,6 +10,7 @@ import {
 import { serializeForm } from '@evershop/evershop/src/lib/util/formToJson';
 import Button from '@components/common/form/Button';
 import { validator } from './validator';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export const FormContext = React.createContext();
 export const FormDispatch = React.createContext();
@@ -198,7 +199,7 @@ export function Form(props) {
           {submitBtn === true && (
             <div className="form-submit-button flex border-t border-divider mt-1 pt-1">
               <Button
-                title={btnText || 'Save'}
+                title={btnText || _('Save')}
                 onAction={() => {
                   document
                     .getElementById(id)

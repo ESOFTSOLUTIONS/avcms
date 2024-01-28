@@ -10,6 +10,7 @@ import CreatableSelect from 'react-select/creatable';
 import Spinner from '@components/common/Spinner';
 import { useQuery } from 'urql';
 import { toast } from 'react-toastify';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 const MethodsQuery = `
   query Methods {
@@ -210,9 +211,9 @@ function MethodForm({ saveMethodApi, closeModal, getZones, method }) {
         </Card.Session>
         <Card.Session>
           <div className="flex justify-end gap-1">
-            <Button title="Cancel" variant="secondary" onAction={closeModal} />
+            <Button title={_('Cancel')} variant="secondary" onAction={closeModal} />
             <Button
-              title="Save"
+              title={_('Save')}
               variant="primary"
               onAction={() => {
                 document.getElementById('shippingMethodForm').dispatchEvent(

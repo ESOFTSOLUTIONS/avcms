@@ -4,6 +4,7 @@ import Area from '@components/common/Area';
 import Button from '@components/common/form/Button';
 import { useFormContext } from '@components/common/form/Form';
 import './FormContent.scss';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 export default function FormContent({ gridUrl }) {
   const { state } = useFormContext();
@@ -27,7 +28,7 @@ export default function FormContent({ gridUrl }) {
           }}
         />
         <Button
-          title="Save"
+          title={_('Save')}
           onAction={() => {
             document
               .getElementById('attributeForm')

@@ -11,6 +11,7 @@ import BasicColumnHeader from '@components/common/grid/headers/Basic';
 import StatusColumnHeader from '@components/common/grid/headers/Status';
 import StatusRow from '@components/common/grid/rows/StatusRow';
 import PageName from '@components/admin/cms/cmsPageGrid/rows/PageName';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 function Actions({ pages = [], selectedIds = [] }) {
   const { openAlert, closeAlert } = useAlertContext();
@@ -44,18 +45,18 @@ function Actions({ pages = [], selectedIds = [] }) {
 
   const actions = [
     {
-      name: 'Disable',
+      name: _('Disable'),
       onAction: () => {
         openAlert({
           heading: `Disable ${selectedIds.length} pages`,
           content: 'Are you sure?',
           primaryAction: {
-            title: 'Cancel',
+            title: _('Cancel'),
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Disable',
+            title: _('Disable'),
             onAction: async () => {
               await updatePages(0);
             },
@@ -66,18 +67,18 @@ function Actions({ pages = [], selectedIds = [] }) {
       }
     },
     {
-      name: 'Enable',
+      name: _('Enable'),
       onAction: () => {
         openAlert({
           heading: `Enable ${selectedIds.length} pages`,
           content: 'Are you sure?',
           primaryAction: {
-            title: 'Cancel',
+            title: _('Cancel'),
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Enable',
+            title: _('Enable'),
             onAction: async () => {
               await updatePages(1);
             },
@@ -94,12 +95,12 @@ function Actions({ pages = [], selectedIds = [] }) {
           heading: `Delete ${selectedIds.length} pages`,
           content: <div>Can&apos;t be undone</div>,
           primaryAction: {
-            title: 'Cancel',
+            title: _('Cancel'),
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Delete',
+            title: _('Delete'),
             onAction: async () => {
               await deletePages();
             },

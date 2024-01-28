@@ -4,6 +4,7 @@ import { Card } from '@components/admin/cms/Card';
 import { Field } from '@components/common/form/Field';
 import { Form } from '@components/common/form/Form';
 import Button from '@components/common/form/Button';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 function TaxClassForm({ saveTaxClassApi, closeModal, getTaxClasses }) {
   return (
@@ -29,9 +30,9 @@ function TaxClassForm({ saveTaxClassApi, closeModal, getTaxClasses }) {
         </Card.Session>
         <Card.Session>
           <div className="flex justify-end gap-1">
-            <Button title="Cancel" variant="secondary" onAction={closeModal} />
+            <Button title={_('Cancel')} variant="secondary" onAction={closeModal} />
             <Button
-              title="Save"
+              title={_('Save')}
               variant="primary"
               onAction={() => {
                 document.getElementById('createTaxClass').dispatchEvent(
