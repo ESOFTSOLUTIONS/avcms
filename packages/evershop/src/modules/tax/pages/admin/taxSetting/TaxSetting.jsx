@@ -11,6 +11,7 @@ import { TaxClasses } from '@components/admin/tax/taxSetting/TaxClasses';
 import { Form } from '@components/common/form/Form';
 import { Field } from '@components/common/form/Field';
 import { toast } from 'react-toastify';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 const CountriesQuery = `
   query Country($countries: [String]) {
@@ -90,8 +91,7 @@ export default function TaxSetting({
           <Card>
             <Card.Session title="Tax">
               <div>
-                Configure the tax classes that will be available to your
-                customers at checkout.
+                {_('Configure the tax classes that will be available to your customers at checkout')}
               </div>
             </Card.Session>
             <Card.Session title="Basic configuration">
