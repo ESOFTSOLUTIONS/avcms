@@ -1,14 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from '@components/admin/cms/Card';
+import { _ } from '@evershop/evershop/src/lib/locale/translate';
 import { Rates } from './Rates';
 
 function TaxClass({ taxClass, getTaxClasses }) {
+
+  const deleteTaxClass = async () => {
+    const url = ''; // taxClass.deleteApi;
+    await fetch(url, { method: 'DELETE' });
+  };
+
   return (
     <Card.Session
       title={
-        <div className="flex justify-between items-center gap-2">
-          <div>{taxClass.name}</div>
+        <div className="flex flex-row">
+          <div className="w-6/12">{taxClass.name}</div>
+          <div className="w-6/12 text-right">
+            <button type="button" className="button primary uppercase" onClick={deleteTaxClass}>
+              {_('Delete')}
+            </button>
+          </div>
         </div>
       }
     >

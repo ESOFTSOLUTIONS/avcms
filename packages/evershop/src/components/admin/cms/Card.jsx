@@ -70,7 +70,7 @@ const Session = function Session({ actions = [], title, children }) {
     <div className="card-section border-b box-border">
       {(title || actions.length > 0) && (
         <div className="flex justify-between card-section-header mb-1">
-          {title && <h3 className="card-session-title">{title}</h3>}
+          {title && <h3 className="card-session-title w-full">{title}</h3>}
           {actions.length > 0 && (
             <div className="flex space-x-075">
               {actions.map((action, index) => {
